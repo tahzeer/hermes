@@ -1,0 +1,24 @@
+{
+  "name": "chrome-extension-ts",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "start": "parcel watch src/manifest.json --host localhost",
+    "build:parcel": "parcel build src/manifest.json",
+    "build": "npm run clean && npm run build:parcel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/config-webextension": "^2.13.0",
+    "@types/chrome": "^0.0.283",
+    "parcel": "^2.13.0",
+    "typescript": "^5.6.3"
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  }
+}
