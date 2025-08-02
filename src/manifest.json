@@ -1,21 +1,21 @@
 {
     "manifest_version": 3,
-    "name": "Sample Chrome Extension",
+    "name": "Hermes",
     "version": "0.1",
-    "description": "A sample typescript chrome extension",
+    "description": "Lighweight chrome extension to enhance the github experience",
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
     },
     "action": {
-        "default_title": "Sample Chrome Extension",
+        "default_title": "Hermes",
         "default_popup": "popup/index.html"
     },
     "options_page": "options/index.html",
-    "permissions":[],
+    "permissions":["storage", "scripting", "tabs"],
     "host_permissions": [
-        "*://*/*"
+        "*://github.com/*"
     ],
     "background": {
         "service_worker": "./background/worker.ts",
@@ -23,6 +23,6 @@
     },
     "content_scripts": [{
         "js": ["./content/script.ts"],
-        "matches": ["<all_urls>"]
+        "matches": ["*://github.com/*"]
     }]
 }
