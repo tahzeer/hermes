@@ -49,3 +49,6 @@ pnpm-debug.log*
 ._*
 .Spotlight-V100
 .Trashes
+
+# Zip files
+*.zip

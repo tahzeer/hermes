@@ -1,28 +1,27 @@
 {
     "manifest_version": 3,
-    "name": "Hermes",
+    "name": "Hermes (BETA) - Enhance your github experience",
     "version": "0.1",
-    "description": "Lighweight chrome extension to enhance the github experience",
+    "description": "Lightweight chrome extension to enhance your github experience",
     "icons": {
         "16": "icons/icon16.png",
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
     },
     "action": {
-        "default_title": "Hermes",
-        "default_popup": "popup/index.html"
+        "default_title": "Hermes"
     },
-    "options_page": "options/index.html",
-    "permissions":["storage", "scripting", "tabs"],
+    "permissions":["scripting", "tabs"],
     "host_permissions": [
         "*://github.com/*"
     ],
     "background": {
-        "service_worker": "./background/worker.ts",
+        "service_worker": "./background/worker.js",
         "type": "module"
     },
     "content_scripts": [{
-        "js": ["./content/script.ts"],
-        "matches": ["*://github.com/*"]
+        "js": ["./content/script.js"],
+        "matches": ["*://github.com/*/compare/*...*"],
+        "run_at": "document_idle"
     }]
 }
