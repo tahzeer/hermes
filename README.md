@@ -34,8 +34,4 @@ Hermes is a lightweight Chrome extension that enhances GitHub workflows, startin
 
 ## Contributing
 
-If you'd like to contribute to this template, feel free to open an issue or submit a pull request. Your contributions are welcome!
-
----
-
-This project uses the [Chrome Extension TypeScript Template](https://github.com/tahzeer/chrome-extension-ts) as its foundation.
+If you'd like to contribute to this project, feel free to open an issue or submit a pull request. Your contributions are welcome!
